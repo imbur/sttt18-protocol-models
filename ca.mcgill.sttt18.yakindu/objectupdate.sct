@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sgraph="http://www.yakindu.org/sct/sgraph/2.0.0">
-  <sgraph:Statechart xmi:id="_YJFNQDXsEemcCM61BAdi1Q" specification="@EventDriven&#xA;// Use the event driven execution model.&#xA;// Runs a run-to-completion step&#xA;// each time an event is raised.&#xA;// Switch to cycle based behavior&#xA;// by specifying '@CycleBased(200)'&#xA;// instead.&#xA;&#xA;@ChildFirstExecution&#xA;// In composite states, execute&#xA;// child states first.&#xA;// @ParentFirstExecution does the opposite.&#xA;&#xA;&#xA;interface:&#xA;in event createPhaseBegin&#xA;in event createPhaseEnd&#xA;in event deletePhaseBegin&#xA;in event deletePhaseEnd&#xA;var isMessageLoss : boolean&#xA;var hasCreateHappenedBeforeDelete : boolean&#xA;&#xA;&#xA;interface sensing:&#xA;in event delete&#xA;in event create&#xA;&#xA;interface messaging:&#xA;in event receiveCreate&#xA;in event receiveDelete&#xA;operation broadcastCreate()&#xA;operation broadcastDelete()&#xA;" name="objectupdate">
+  <sgraph:Statechart xmi:id="_YJFNQDXsEemcCM61BAdi1Q" specification="@EventDriven&#xA;// Use the event driven execution model.&#xA;// Runs a run-to-completion step&#xA;// each time an event is raised.&#xA;// Switch to cycle based behavior&#xA;// by specifying '@CycleBased(200)'&#xA;// instead.&#xA;&#xA;@ChildFirstExecution&#xA;// In composite states, execute&#xA;// child states first.&#xA;// @ParentFirstExecution does the opposite.&#xA;&#xA;&#xA;interface:&#xA;&#x9;in event createPhaseBegin&#xA;&#x9;in event createPhaseEnd&#xA;&#x9;in event deletePhaseBegin&#xA;&#x9;in event deletePhaseEnd&#xA;&#x9;var isMessageLoss : boolean&#xA;&#x9;var hasCreateHappenedBeforeDelete : boolean&#xA;&#xA;&#xA;interface sensing:&#xA;&#x9;in event delete&#xA;&#x9;in event create&#xA;&#xA;interface messaging:&#xA;&#x9;in event receiveCreate&#xA;&#x9;in event receiveDelete&#xA;&#x9;operation broadcastCreate()&#xA;&#x9;operation broadcastDelete()&#xA;" name="objectupdate">
     <regions xmi:id="_YJbLgDXsEemcCM61BAdi1Q" name="Main region">
       <vertices xsi:type="sgraph:State" xmi:id="_wCOvgDXzEemcCM61BAdi1Q" name="Object lifecycle" incomingTransitions="_9ObEADXzEemcCM61BAdi1Q">
         <regions xmi:id="_wCP9oDXzEemcCM61BAdi1Q" name="Sensing">
@@ -20,7 +20,7 @@
           </vertices>
         </regions>
         <regions xmi:id="_wCP9oTXzEemcCM61BAdi1Q" name="Messaging">
-          <vertices xsi:type="sgraph:State" xmi:id="_YJy-8DXsEemcCM61BAdi1Q" name="Void" incomingTransitions="_YJ3QYDXsEemcCM61BAdi1Q _uLmg4DX6EemcCM61BAdi1Q">
+          <vertices xsi:type="sgraph:State" xmi:id="_YJy-8DXsEemcCM61BAdi1Q" specification="" name="Idle" incomingTransitions="_YJ3QYDXsEemcCM61BAdi1Q _uLmg4DX6EemcCM61BAdi1Q">
             <outgoingTransitions xmi:id="_oQzCQDXtEemcCM61BAdi1Q" specification="createPhaseBegin &#xA;[active(Sensing.Create_detected)] / &#xA;messaging.broadcastCreate" target="_gNGHADXsEemcCM61BAdi1Q"/>
             <outgoingTransitions xmi:id="_tw3FoDX6EemcCM61BAdi1Q" specification="createPhaseBegin &#xA;[!active(Sensing.Create_detected)]" target="_p7IKMDX6EemcCM61BAdi1Q"/>
           </vertices>
@@ -308,7 +308,7 @@
                   <styles xsi:type="notation:ShapeStyle" xmi:id="_-tqlZzX6EemcCM61BAdi1Q" fontName="Verdana" fillColor="15981773" lineColor="12632256"/>
                   <styles xsi:type="notation:FontStyle" xmi:id="_-tqlaDX6EemcCM61BAdi1Q"/>
                   <styles xsi:type="notation:BooleanValueStyle" xmi:id="_-tqlaTX6EemcCM61BAdi1Q" name="isHorizontal" booleanValue="true"/>
-                  <layoutConstraint xsi:type="notation:Bounds" xmi:id="_-tqlajX6EemcCM61BAdi1Q" x="438" width="814" height="787"/>
+                  <layoutConstraint xsi:type="notation:Bounds" xmi:id="_-tqlajX6EemcCM61BAdi1Q" x="438" width="650" height="648"/>
                 </children>
                 <children xmi:id="_-tqlazX6EemcCM61BAdi1Q" type="Entry" element="_YJxJwDXsEemcCM61BAdi1Q">
                   <children xmi:id="_-tqlbDX6EemcCM61BAdi1Q" type="BorderItemLabelContainer">
@@ -381,7 +381,7 @@
                   <styles xsi:type="notation:ShapeStyle" xmi:id="_-tqlnTX6EemcCM61BAdi1Q" fontName="Verdana" fillColor="15981773" lineColor="12632256"/>
                   <styles xsi:type="notation:FontStyle" xmi:id="_-tqlnjX6EemcCM61BAdi1Q"/>
                   <styles xsi:type="notation:BooleanValueStyle" xmi:id="_-tqlnzX6EemcCM61BAdi1Q" name="isHorizontal" booleanValue="true"/>
-                  <layoutConstraint xsi:type="notation:Bounds" xmi:id="_-tqloDX6EemcCM61BAdi1Q" x="12" y="505" width="405" height="282"/>
+                  <layoutConstraint xsi:type="notation:Bounds" xmi:id="_-tqloDX6EemcCM61BAdi1Q" x="19" y="366" width="405" height="282"/>
                 </children>
                 <children xmi:id="_-tqloTX6EemcCM61BAdi1Q" type="State" element="_p7IKMDX6EemcCM61BAdi1Q">
                   <children xsi:type="notation:DecorationNode" xmi:id="_-tqlojX6EemcCM61BAdi1Q" type="StateName">
@@ -685,7 +685,7 @@
     <edges xmi:id="_khwQwDYFEemcCM61BAdi1Q" type="Transition" element="_khvpsDYFEemcCM61BAdi1Q" source="_-tqlKDX6EemcCM61BAdi1Q" target="_-tqlgjX6EemcCM61BAdi1Q">
       <children xsi:type="notation:DecorationNode" xmi:id="_khwQxDYFEemcCM61BAdi1Q" type="TransitionExpression">
         <styles xsi:type="notation:ShapeStyle" xmi:id="_khwQxTYFEemcCM61BAdi1Q"/>
-        <layoutConstraint xsi:type="notation:Location" xmi:id="_khwQxjYFEemcCM61BAdi1Q" x="-138" y="-66"/>
+        <layoutConstraint xsi:type="notation:Location" xmi:id="_khwQxjYFEemcCM61BAdi1Q" x="-90" y="-48"/>
       </children>
       <styles xsi:type="notation:ConnectorStyle" xmi:id="_khwQwTYFEemcCM61BAdi1Q" routing="Rectilinear" lineColor="4210752"/>
       <styles xsi:type="notation:FontStyle" xmi:id="_khwQwzYFEemcCM61BAdi1Q" fontName="Verdana"/>
@@ -694,11 +694,11 @@
     <edges xmi:id="_yCOzMTYFEemcCM61BAdi1Q" type="Transition" element="_yCOzMDYFEemcCM61BAdi1Q" source="_-tqlWDX6EemcCM61BAdi1Q" target="_-tqlgjX6EemcCM61BAdi1Q">
       <children xsi:type="notation:DecorationNode" xmi:id="_yCPaQDYFEemcCM61BAdi1Q" type="TransitionExpression">
         <styles xsi:type="notation:ShapeStyle" xmi:id="_yCPaQTYFEemcCM61BAdi1Q"/>
-        <layoutConstraint xsi:type="notation:Location" xmi:id="_yCPaQjYFEemcCM61BAdi1Q" x="-235" y="94"/>
+        <layoutConstraint xsi:type="notation:Location" xmi:id="_yCPaQjYFEemcCM61BAdi1Q" x="-240" y="94"/>
       </children>
       <styles xsi:type="notation:ConnectorStyle" xmi:id="_yCOzMjYFEemcCM61BAdi1Q" routing="Rectilinear" lineColor="4210752"/>
       <styles xsi:type="notation:FontStyle" xmi:id="_yCOzNDYFEemcCM61BAdi1Q" fontName="Verdana"/>
-      <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_yCOzMzYFEemcCM61BAdi1Q" points="[3, 24, 802, -120]$[3, 141, 802, -3]$[-764, 141, 35, -3]"/>
+      <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_yCOzMzYFEemcCM61BAdi1Q" points="[3, 24, 795, 19]$[3, 53, 795, 48]$[-785, 53, 7, 48]$[-785, 11, 7, 6]"/>
       <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_yjj-oDYFEemcCM61BAdi1Q" id="(0.4307692307692308,0.8867924528301887)"/>
     </edges>
   </notation:Diagram>
