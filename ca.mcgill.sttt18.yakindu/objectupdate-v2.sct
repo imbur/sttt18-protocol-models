@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sgraph="http://www.yakindu.org/sct/sgraph/2.0.0">
-  <sgraph:Statechart xmi:id="_YJFNQDXsEemcCM61BAdi1Q" specification="@EventDriven&#xA;@ChildFirstExecution&#xA;&#xA;//interface:&#xA;//    const  ID : integer = 1&#xA;//    var readonly SENDER_ID : integer&#xA;//    var readonly CYCLETIME : integer = 200&#xA;//&#x9;operation minTimeStamp (a : integer, b :integer) : integer&#xA;//&#x9;in event sampleEvent: integer&#xA;//&#x9;var sender: integer&#xA;&#xA;interface:&#xA;&#x9;const PARTICIPANT_ID : integer = 0&#xA;&#xA;interface timer:&#xA;&#x9;in event tick&#xA;&#x9;out event objMoveStart&#xA;&#x9;out event objCreateStart&#xA;&#x9;out event objDeleteStart&#xA;&#x9;out event refRequestStart&#xA;&#x9;out event refReplyStart&#xA;&#x9;out event queryStart&#xA;&#x9;&#xA;interface fault:&#xA;    var isCreateMsgLost : boolean&#xA;    var isDeleteMsgLost : boolean&#xA;    var isMoveRequestLost: boolean&#xA;    var isMovedBeforeDeleted : boolean&#xA;&#x9;var isBroadcastNewHostLost : boolean&#xA;&#x9;var isAckMoveLost : boolean&#xA;&#x9;&#xA;interface sensing:&#xA;&#x9;in event appear&#xA;&#x9;in event disappear&#xA;&#x9;var objectAppeared : boolean&#xA;&#x9;var objectDisappeared : boolean&#xA;&#xA;interface owner:&#xA;    in event releaseObject&#xA;    in event hostObject&#xA;&#xA;interface data:&#xA;&#x9;var newHostID : integer&#xA;&#x9;in event create : integer&#xA;&#x9;in event delete : integer&#xA;&#x9;in event moveRequest : integer&#xA;&#x9;in event moveAck: integer&#xA;&#x9;in event moveReject : integer&#xA;&#x9;in event newHost : integer&#xA;//&#x9;operation broadcastCreate()&#xA;//&#x9;operation broadcastDelete()&#xA;//&#x9;operation requestMove()&#xA;//&#x9;operation ackMove(host:integer)&#xA;//&#x9;operation broadcastNewHost()&#xA;&#xA;&#x9;" name="objectupdate">
+  <sgraph:Statechart xmi:id="_YJFNQDXsEemcCM61BAdi1Q" specification="@EventDriven&#xA;@ChildFirstExecution&#xA;&#xA;interface:&#xA;&#x9;const PARTICIPANT_ID : integer = 0&#xA;&#xA;interface timer:&#xA;&#x9;in event tick&#xA;&#x9;out event objMoveStart&#xA;&#x9;out event objCreateStart&#xA;&#x9;out event objDeleteStart&#xA;&#x9;out event refRequestStart&#xA;&#x9;out event refReplyStart&#xA;&#x9;out event queryStart&#xA;&#x9;&#xA;interface fault:&#xA;    var isCreateMsgLost : boolean&#xA;    var isDeleteMsgLost : boolean&#xA;    var isMoveRequestLost: boolean&#xA;    var isMovedBeforeDeleted : boolean&#xA;&#x9;var isBroadcastNewHostLost : boolean&#xA;&#x9;var isAckMoveLost : boolean&#xA;&#x9;&#xA;interface sensing:&#xA;&#x9;in event appear&#xA;&#x9;in event disappear&#xA;&#x9;var objectAppeared : boolean&#xA;&#x9;var objectDisappeared : boolean&#xA;&#xA;interface owner:&#xA;    in event releaseObject&#xA;    in event hostObject&#xA;&#xA;interface data:&#xA;&#x9;var newHostID : integer&#xA;&#x9;in event create : integer&#xA;&#x9;in event delete : integer&#xA;&#x9;in event moveRequest : integer&#xA;&#x9;in event moveAck: integer&#xA;&#x9;in event moveReject : integer&#xA;&#x9;in event newHost : integer&#xA;&#xA;&#xA;&#x9;" name="objectupdate">
     <regions xmi:id="_YJbLgDXsEemcCM61BAdi1Q" name="Main region">
       <vertices xsi:type="sgraph:State" xmi:id="_fTXn0DbrEemBDbvSMdfxjg" name="ObjectLifecycle" incomingTransitions="_H3R4YDcNEembUf2I7ByfRQ">
         <regions xmi:id="_DAOF0DbsEemBDbvSMdfxjg" name="phases">
@@ -29,7 +29,7 @@
         <regions xmi:id="_fTarIDbrEemBDbvSMdfxjg" name="sensing">
           <vertices xsi:type="sgraph:State" xmi:id="_Fo8ZQDX0EemcCM61BAdi1Q" name="ObjectAppeared" incomingTransitions="_Rz_5gDX3EemcCM61BAdi1Q">
             <outgoingTransitions xmi:id="_SgHYoDX3EemcCM61BAdi1Q" specification="sensing.disappear" target="_wsCi0Db2EemBDbvSMdfxjg"/>
-            <outgoingTransitions xmi:id="_oGKpIDX5EemcCM61BAdi1Q" specification="timer.objCreateStart / &#xA;sensing.objectAppeared = false;&#xA;sensing.objectDisappeared= true" target="_DJD2cDX0EemcCM61BAdi1Q"/>
+            <outgoingTransitions xmi:id="_oGKpIDX5EemcCM61BAdi1Q" specification="timer.objCreateStart / &#xA;sensing.objectAppeared = true;&#xA;sensing.objectDisappeared= false" target="_DJD2cDX0EemcCM61BAdi1Q"/>
           </vertices>
           <vertices xsi:type="sgraph:Entry" xmi:id="_Cx4FgDX0EemcCM61BAdi1Q">
             <outgoingTransitions xmi:id="_FWYpoDX0EemcCM61BAdi1Q" specification="" target="_DJD2cDX0EemcCM61BAdi1Q"/>
@@ -40,7 +40,7 @@
             <outgoingTransitions xmi:id="_b7x_8Db2EemBDbvSMdfxjg" specification="timer.objCreateStart / &#xA;sensing.objectAppeared = false;&#xA;sensing.objectDisappeared= false" target="_DJD2cDX0EemcCM61BAdi1Q"/>
           </vertices>
           <vertices xsi:type="sgraph:State" xmi:id="_Gs0REDX0EemcCM61BAdi1Q" name="ObjectDisappeared" incomingTransitions="_QfTXcDX3EemcCM61BAdi1Q">
-            <outgoingTransitions xmi:id="_cC-kEDX5EemcCM61BAdi1Q" specification="timer.objCreateStart / &#xA;sensing.objectAppeared = true;&#xA;sensing.objectDisappeared = false" target="_DJD2cDX0EemcCM61BAdi1Q"/>
+            <outgoingTransitions xmi:id="_cC-kEDX5EemcCM61BAdi1Q" specification="timer.objCreateStart / &#xA;sensing.objectAppeared = false;&#xA;sensing.objectDisappeared = true" target="_DJD2cDX0EemcCM61BAdi1Q"/>
           </vertices>
           <vertices xsi:type="sgraph:State" xmi:id="_wsCi0Db2EemBDbvSMdfxjg" specification="" name="DisappearAfterAppear" incomingTransitions="_SgHYoDX3EemcCM61BAdi1Q">
             <outgoingTransitions xmi:id="_z02t4Db2EemBDbvSMdfxjg" specification="timer.objCreateStart / &#xA;sensing.objectAppeared = false;&#xA;sensing.objectDisappeared= false" target="_DJD2cDX0EemcCM61BAdi1Q"/>
@@ -988,7 +988,7 @@
     <edges xmi:id="_cC_LIDX5EemcCM61BAdi1Q" type="Transition" element="_cC-kEDX5EemcCM61BAdi1Q" source="_IjoXdzcpEembUf2I7ByfRQ" target="_IjoXazcpEembUf2I7ByfRQ">
       <children xsi:type="notation:DecorationNode" xmi:id="_cC_LJDX5EemcCM61BAdi1Q" type="TransitionExpression">
         <styles xsi:type="notation:ShapeStyle" xmi:id="_cC_LJTX5EemcCM61BAdi1Q"/>
-        <layoutConstraint xsi:type="notation:Location" xmi:id="_cC_LJjX5EemcCM61BAdi1Q" x="63" y="-96"/>
+        <layoutConstraint xsi:type="notation:Location" xmi:id="_cC_LJjX5EemcCM61BAdi1Q" x="55" y="-96"/>
       </children>
       <styles xsi:type="notation:ConnectorStyle" xmi:id="_cC_LITX5EemcCM61BAdi1Q" routing="Rectilinear" lineColor="4210752"/>
       <styles xsi:type="notation:FontStyle" xmi:id="_cC_LIzX5EemcCM61BAdi1Q" fontName="Verdana"/>
@@ -1556,7 +1556,7 @@
     <edges xmi:id="_rwz_IDcbEembUf2I7ByfRQ" type="Transition" element="_rwzYEDcbEembUf2I7ByfRQ" source="_eOOEMDcYEembUf2I7ByfRQ" target="_p_mzfTcOEembUf2I7ByfRQ">
       <children xsi:type="notation:DecorationNode" xmi:id="_rw0mMTcbEembUf2I7ByfRQ" type="TransitionExpression">
         <styles xsi:type="notation:ShapeStyle" xmi:id="_rw0mMjcbEembUf2I7ByfRQ"/>
-        <layoutConstraint xsi:type="notation:Location" xmi:id="_rw0mMzcbEembUf2I7ByfRQ" x="-94" y="102"/>
+        <layoutConstraint xsi:type="notation:Location" xmi:id="_rw0mMzcbEembUf2I7ByfRQ" x="-64" y="111"/>
       </children>
       <styles xsi:type="notation:ConnectorStyle" xmi:id="_rwz_ITcbEembUf2I7ByfRQ" routing="Rectilinear" lineColor="4210752"/>
       <styles xsi:type="notation:FontStyle" xmi:id="_rw0mMDcbEembUf2I7ByfRQ" fontName="Verdana"/>
