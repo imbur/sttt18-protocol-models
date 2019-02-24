@@ -373,10 +373,10 @@
                   <children xsi:type="notation:Compartment" xmi:id="_mOHOaDeZEemtsMQyn7nXhw" type="StateFigureCompartment">
                     <children xmi:id="_mOHOaTeZEemtsMQyn7nXhw" type="Region" element="_co2kMDXsEemcCM61BAdi1Q">
                       <children xsi:type="notation:DecorationNode" xmi:id="_mOHOajeZEemtsMQyn7nXhw" type="RegionName">
-                        <styles xsi:type="notation:ShapeStyle" xmi:id="_mOHOazeZEemtsMQyn7nXhw"/>
+                        <styles xsi:type="notation:ShapeStyle" xmi:id="_mOHOazeZEemtsMQyn7nXhw" fontColor="16777215"/>
                         <layoutConstraint xsi:type="notation:Location" xmi:id="_mOHObDeZEemtsMQyn7nXhw"/>
                       </children>
-                      <children xsi:type="notation:Shape" xmi:id="_mOHObTeZEemtsMQyn7nXhw" type="RegionCompartment" fontName="Verdana" lineColor="4210752">
+                      <children xsi:type="notation:Shape" xmi:id="_mOHObTeZEemtsMQyn7nXhw" type="RegionCompartment" fontColor="16777215" fontName="Verdana" lineColor="4210752">
                         <children xmi:id="_mOHObjeZEemtsMQyn7nXhw" type="State" element="_gNGHADXsEemcCM61BAdi1Q">
                           <children xsi:type="notation:DecorationNode" xmi:id="_mOHObzeZEemtsMQyn7nXhw" type="StateName">
                             <styles xsi:type="notation:ShapeStyle" xmi:id="_mOHOcDeZEemtsMQyn7nXhw"/>
@@ -424,7 +424,7 @@
                         </children>
                         <layoutConstraint xsi:type="notation:Bounds" xmi:id="_mOHOkDeZEemtsMQyn7nXhw"/>
                       </children>
-                      <styles xsi:type="notation:ShapeStyle" xmi:id="_mOHOkTeZEemtsMQyn7nXhw" fontName="Verdana" fillColor="15790320" lineColor="12632256"/>
+                      <styles xsi:type="notation:ShapeStyle" xmi:id="_mOHOkTeZEemtsMQyn7nXhw" fontColor="16777215" fontName="Verdana" fillColor="15790320" lineColor="12632256"/>
                       <layoutConstraint xsi:type="notation:Bounds" xmi:id="_mOHOkjeZEemtsMQyn7nXhw"/>
                     </children>
                   </children>
@@ -459,10 +459,10 @@
                   <children xsi:type="notation:Compartment" xmi:id="_mOHOqDeZEemtsMQyn7nXhw" type="StateFigureCompartment">
                     <children xmi:id="_mOHOqTeZEemtsMQyn7nXhw" type="Region" element="_v1TPEzapEemBDbvSMdfxjg">
                       <children xsi:type="notation:DecorationNode" xmi:id="_mOHOqjeZEemtsMQyn7nXhw" type="RegionName">
-                        <styles xsi:type="notation:ShapeStyle" xmi:id="_mOHOqzeZEemtsMQyn7nXhw"/>
+                        <styles xsi:type="notation:ShapeStyle" xmi:id="_mOHOqzeZEemtsMQyn7nXhw" fontColor="16777215"/>
                         <layoutConstraint xsi:type="notation:Location" xmi:id="_mOHOrDeZEemtsMQyn7nXhw"/>
                       </children>
-                      <children xsi:type="notation:Shape" xmi:id="_mOHOrTeZEemtsMQyn7nXhw" type="RegionCompartment" fontName="Verdana" lineColor="4210752">
+                      <children xsi:type="notation:Shape" xmi:id="_mOHOrTeZEemtsMQyn7nXhw" type="RegionCompartment" fontColor="16777215" fontName="Verdana" lineColor="4210752">
                         <children xmi:id="_mOHOrjeZEemtsMQyn7nXhw" type="State" element="_7B3KADXsEemcCM61BAdi1Q">
                           <children xsi:type="notation:DecorationNode" xmi:id="_mOHOrzeZEemtsMQyn7nXhw" type="StateName">
                             <styles xsi:type="notation:ShapeStyle" xmi:id="_mOHOsDeZEemtsMQyn7nXhw"/>
@@ -513,7 +513,7 @@
                         </children>
                         <layoutConstraint xsi:type="notation:Bounds" xmi:id="_mOHO0jeZEemtsMQyn7nXhw"/>
                       </children>
-                      <styles xsi:type="notation:ShapeStyle" xmi:id="_mOHO0zeZEemtsMQyn7nXhw" fontName="Verdana" fillColor="15790320" lineColor="12632256"/>
+                      <styles xsi:type="notation:ShapeStyle" xmi:id="_mOHO0zeZEemtsMQyn7nXhw" fontColor="16777215" fontName="Verdana" fillColor="15790320" lineColor="12632256"/>
                       <layoutConstraint xsi:type="notation:Bounds" xmi:id="_mOHO1DeZEemtsMQyn7nXhw"/>
                     </children>
                   </children>
@@ -644,7 +644,6 @@
       <styles xsi:type="notation:FontStyle" xmi:id="_YJ8I4DXsEemcCM61BAdi1Q" fontName="Verdana"/>
       <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_YJ7h0jXsEemcCM61BAdi1Q" points="[-1, 6, -34, -62]$[-1, 43, -34, -25]"/>
       <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_hWWYoDXtEemcCM61BAdi1Q" id="(0.5,0.5)"/>
-      <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_IB15wDY1Eem2vv-dvgYC-w" id="(0.7777777777777778,0.5)"/>
     </edges>
     <edges xmi:id="_-E3A8DXsEemcCM61BAdi1Q" type="Transition" element="_-E1y0DXsEemcCM61BAdi1Q" source="_mOHOujeZEemtsMQyn7nXhw" target="_mOHOrjeZEemtsMQyn7nXhw">
       <children xsi:type="notation:DecorationNode" xmi:id="_-E3oATXsEemcCM61BAdi1Q" type="TransitionExpression">
